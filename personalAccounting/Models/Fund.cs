@@ -1,24 +1,25 @@
-﻿using System;
+﻿using personalAccounting.Patterns.Composite;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace personalAccounting
+namespace personalAccounting.Models
 {
-    class Fund
+    public class Fund : IFinanceComponent
     {
-        public string FundId { get; set; }
+        public int FundId { get; set; }
         public string FundName { get; set; }
-        public decimal GoalAmount { get; set; }
-        public enum Type { Personal, Family };
+        public decimal Balance { get; set; }
+        public int UserId { get; set; }
 
-        public void AddMember()
+        public decimal GetTotalBalance()
         {
+            return Balance;
         }
 
-        public void AddTransaction()
+        public void Add(IFinanceComponent component) { }
+        public void Remove(IFinanceComponent component) { }
+        public List<IFinanceComponent> GetChildren()
         {
+            return new List<IFinanceComponent>();
         }
     }
 }

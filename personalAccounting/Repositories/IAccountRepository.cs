@@ -1,4 +1,5 @@
-﻿using System;
+﻿using personalAccounting.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace personalAccounting.Repositories
         void Add(Account account);
         void Update(Account account);
         void Delete(int id);
+        List<Account> GetAllByUserId(int userId);
     }
 }

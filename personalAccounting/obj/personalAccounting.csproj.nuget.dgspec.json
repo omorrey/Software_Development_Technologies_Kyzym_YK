@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\personalAccounting\\personalAccounting\\personalAccounting.csproj": {}
+    "C:\\Users\\user\\source\\repos\\personalAccounting\\Software_Development_Technologies_Kyzym_YK\\personalAccounting\\personalAccounting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\personalAccounting\\personalAccounting\\personalAccounting.csproj": {
+    "C:\\Users\\user\\source\\repos\\personalAccounting\\Software_Development_Technologies_Kyzym_YK\\personalAccounting\\personalAccounting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\personalAccounting\\personalAccounting\\personalAccounting.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\personalAccounting\\Software_Development_Technologies_Kyzym_YK\\personalAccounting\\personalAccounting.csproj",
         "projectName": "personalAccounting",
-        "projectPath": "C:\\Users\\user\\source\\repos\\personalAccounting\\personalAccounting\\personalAccounting.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\personalAccounting\\Software_Development_Technologies_Kyzym_YK\\personalAccounting\\personalAccounting.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\personalAccounting\\personalAccounting\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\personalAccounting\\Software_Development_Technologies_Kyzym_YK\\personalAccounting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,16 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -69,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

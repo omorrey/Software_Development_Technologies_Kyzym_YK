@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\source\repos\personalAccounting\personalAccounting\obj\Debug\net8.0-windows\
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\personalAccounting\obj\Debug\net8.0-windows\
 personalAccounting
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\user\source\repos\personalAccounting\personalAccounting\App.xaml
-11407045341
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\personalAccounting\App.xaml
+7222631702
 
-191681711673
-198-1127337667
-MainWindow.xaml;
+43-1123852844
+224-1440034383
+AddExpenseWindow.xaml;AddIncomeWindow.xaml;DepositWindow.xaml;LoginWindow.xaml;MainWindow.xaml;RegisterWindow.xaml;StatisticsWindow.xaml;
 
 False
 

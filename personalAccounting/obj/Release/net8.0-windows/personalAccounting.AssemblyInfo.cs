@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("personalAccounting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d33c4da559883544684c8e8a4fe6ac9083a3add")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+411cf939d0cf23d57c074475214a1425bdb2106b")]
 [assembly: System.Reflection.AssemblyProductAttribute("personalAccounting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("personalAccounting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

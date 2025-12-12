@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Models"
+    "\\bin",
+    "\\Helpers",
+    "\\Models",
+    "\\Repositories",
+    "\\Services"
   ],
-  "SelectedNode": "\\Models\\Account.cs",
+  "SelectedNode": "\\personalAccounting.csproj",
   "PreviewInSolutionExplorer": false
 }

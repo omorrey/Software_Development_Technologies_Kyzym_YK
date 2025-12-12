@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using personalAccounting.Models;
 
 namespace personalAccounting.Repositories
 {
@@ -14,7 +15,8 @@ namespace personalAccounting.Repositories
         void Update(User user);
         void Delete(int id);
         User GetByEmail(string email);
-        bool Login(string email, string passwordHash);
+        bool Register(string username, string password, string email);
+        User Login(string username, string password);
 
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\bin\Debug\net8.0\BankServer.exe
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\bin\Debug\net8.0\BankServer.deps.json
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\bin\Debug\net8.0\BankServer.runtimeconfig.json
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\bin\Debug\net8.0\BankServer.dll
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\bin\Debug\net8.0\BankServer.pdb
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\BankServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\BankServer.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\BankServer.AssemblyInfo.cs
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\BankServer.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\BankServer.sourcelink.json
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\BankServer.dll
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\refint\BankServer.dll
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\BankServer.pdb
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\BankServer.genruntimeconfig.cache
+C:\Users\user\source\repos\personalAccounting\Software_Development_Technologies_Kyzym_YK\BankServer\obj\Debug\net8.0\ref\BankServer.dll

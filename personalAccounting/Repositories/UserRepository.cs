@@ -1,46 +1,113 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
+using personalAccounting.Models;
 
 namespace personalAccounting.Repositories
 {
-    class UserRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
-        public void Add(User user)
+        public bool Register(string username, string password, string email)
         {
-            throw new NotImplementedException();
+            using (var connection = DatabaseHelper.GetConnection())
+            {
+                connection.Open();
+
+                string checkQuery = "SELECT COUNT(*) FROM Users WHERE UserName = @UserName";
+                using (var checkCmd = new SqlCommand(checkQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@UserName", username);
+                    int count = (int)checkCmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        return false;
+                    }
+                }
+
+                string query = "INSERT INTO Users (UserName, Email, PasswordHash, AuthStatus) VALUES (@UserName, @Email, @PasswordHash, 0)";
+
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserName", username);
+                    command.Parameters.AddWithValue("@Email", email ?? (object)DBNull.Value); 
+                    command.Parameters.AddWithValue("@PasswordHash", password); 
+
+                    command.ExecuteNonQuery();
+                }
+            }
+            return true;
         }
 
-        public void Delete(int id)
+        public User Login(string username, string password)
         {
-            throw new NotImplementedException();
-        }
+            using (var connection = DatabaseHelper.GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT UserId, UserName, Email, PasswordHash, AuthStatus FROM Users WHERE UserName = @UserName AND PasswordHash = @PasswordHash";
 
-        public List<User> GetAll()
-        {
-            throw new NotImplementedException();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserName", username);
+                    command.Parameters.AddWithValue("@PasswordHash", password);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new User
+                            {
+                                UserId = (int)reader["UserId"],
+                                UserName = reader["UserName"].ToString(),
+                                Email = reader["Email"] != DBNull.Value ? reader["Email"].ToString() : null,
+                                PasswordHash = reader["PasswordHash"].ToString(),
+                                AuthStatus = (bool)reader["AuthStatus"]
+                            };
+                        }
+                    }
+                }
+            }
+            return null; 
         }
 
         public User GetByEmail(string email)
         {
-            throw new NotImplementedException();
+            using (var connection = DatabaseHelper.GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT UserId, UserName, Email, PasswordHash, AuthStatus FROM Users WHERE Email = @Email";
+
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Email", email);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new User
+                            {
+                                UserId = (int)reader["UserId"],
+                                UserName = reader["UserName"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                PasswordHash = reader["PasswordHash"].ToString(),
+                                AuthStatus = (bool)reader["AuthStatus"]
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
         }
 
-        public User GetById(int id)
+        public void Add(User user)
         {
-            throw new NotImplementedException();
+            Register(user.UserName, user.PasswordHash, user.Email);
         }
 
-        public bool Login(string email, string passwordHash)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(User user)
-        {
-            throw new NotImplementedException();
-        }
+        public void Delete(int id) { throw new NotImplementedException(); }
+        public List<User> GetAll() { throw new NotImplementedException(); }
+        public User GetById(int id) { throw new NotImplementedException(); }
+        public void Update(User user) { throw new NotImplementedException(); }
     }
 }
